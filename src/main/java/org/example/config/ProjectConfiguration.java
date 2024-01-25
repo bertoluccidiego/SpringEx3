@@ -1,17 +1,15 @@
 package org.example.config;
 
 import org.example.services.CommentService;
-import org.springframework.context.annotation.Bean;
-import org.springframework.context.annotation.ComponentScan;
-import org.springframework.context.annotation.Configuration;
-import org.springframework.context.annotation.Lazy;
+import org.springframework.beans.factory.config.BeanDefinition;
+import org.springframework.context.annotation.*;
 
 @Configuration
 @ComponentScan(basePackages = "org.example")
 public class ProjectConfiguration {
 
     @Bean
-    @Lazy
+    @Scope(BeanDefinition.SCOPE_PROTOTYPE)
     public CommentService commentService() {
         return new CommentService();
     }
