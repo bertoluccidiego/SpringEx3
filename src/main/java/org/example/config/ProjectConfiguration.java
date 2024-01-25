@@ -8,9 +8,11 @@ import org.springframework.context.annotation.*;
 @ComponentScan(basePackages = "org.example")
 public class ProjectConfiguration {
 
+    /*
     @Bean
     @Scope(BeanDefinition.SCOPE_PROTOTYPE)
     public CommentService commentService() {
         return new CommentService();
     }
+     */
 }

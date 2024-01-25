@@ -4,9 +4,12 @@ import org.example.models.Comment;
 import org.example.proxies.CommentNotificationProxy;
 import org.example.repositories.CommentRepository;
 import org.springframework.beans.factory.annotation.Qualifier;
+import org.springframework.beans.factory.config.BeanDefinition;
+import org.springframework.context.annotation.Scope;
 import org.springframework.stereotype.Service;
 
-// @Service
+@Service
+@Scope(BeanDefinition.SCOPE_PROTOTYPE)
 public class CommentService {
     public CommentService() {
         System.out.println("CommentService instance created");
