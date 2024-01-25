@@ -6,8 +6,9 @@ import org.example.repositories.CommentRepository;
 import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.stereotype.Service;
 
-@Service
+// @Service
 public class CommentService {
+    /*
     private final CommentRepository commentRepository;
     private final CommentNotificationProxy commentNotificationProxy;
 
@@ -20,4 +21,5 @@ public class CommentService {
         commentRepository.storeComment(comment);
         commentNotificationProxy.sendComment(comment);
     }
+     */
 }
